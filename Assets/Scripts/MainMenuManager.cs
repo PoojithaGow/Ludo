@@ -12,14 +12,14 @@ public class MainMenuManager : MonoBehaviour
     {
         SoundManager.buttonAudioSource.Play();
         numberOfPlayers = 2;
-        SceneManager.LoadScene("Ludo");
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void FourPlayers()
     {
         SoundManager.buttonAudioSource.Play();
         numberOfPlayers = 4;
-        SceneManager.LoadScene("Ludo");
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void Quit()
