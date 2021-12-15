@@ -77,12 +77,12 @@ public class GameManager : MonoBehaviour
         confirmScreen.SetActive(false);
     }
 
-    /*IEnumerator GameOver
+    IEnumerator GameOver()
     {
         yield return new WaitForSeconds(1.5f);
         gameOverScreen.SetActive(true);
     
-    }*/
+    }
 
     public void GameOverYesButton()
     {
@@ -94,6 +94,41 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.buttonAudioSource.Play();
         SceneManager.LoadScene("GameMenu");
+    }
+
+    private void IntializeDice()
+    {
+        diceButton.interactable = true;
+        for(int i = 0; i <= 5; i++)
+        {
+            diceAnimations[i].SetActive(false);
+        }
+
+        switch (MainMenuManager.numberOfPlayers)
+        {
+            case 2:
+                if (playerTurn == "RED")
+                {
+                    diceButtonPos.position = eachDicePos[0].position;
+                    frames[0].SetActive(true);
+                    frames[2].SetActive(false);
+                }
+                if (playerTurn == "GREEN")
+                {
+                    diceButtonPos.position = eachDicePos[2].position;
+                    frames[0].SetActive(false);
+                    frames[2].SetActive(true);
+                }
+                for (int i = 0; i <= 3; i++)
+                {
+                    //redButtons[i].interactable = false;
+                    //greenButtons[i].interactable = false;
+                    redBorder[i].SetActive(false);
+                    greenBorder[i].SetActive(false);
+                }
+                break;
+
+        }
     }
 
     public void DiceRoll()
@@ -166,6 +201,50 @@ public class GameManager : MonoBehaviour
                 {
                     
                         diceAnimations[i].SetActive(false);
+                }
+                break;
+        }
+        StartCoroutine("PlayersNotIntialized");
+    }
+
+    IEnumerator PlayersNotIntialized()
+    {
+        yield return new WaitForSeconds(1f);
+        switch (playerTurn)
+        {
+            case "RED":
+                if (!redBorder[0].activeInHierarchy && !redBorder[1].activeInHierarchy && !redBorder[2].activeInHierarchy
+                    && !redBorder[3].activeInHierarchy)
+                {
+                    /*for (int i = 0; i <= 3; i++)
+                    {
+                        redButtons[i].interactable = false;
+                    }*/
+                    switch (MainMenuManager.numberOfPlayers)
+                    {
+                        case 2:
+                            playerTurn = "GREEN";
+                            IntializeDice();
+                            break;
+                    }
+                }
+                break;
+
+            case "GREEN":
+                if (!greenBorder[0].activeInHierarchy && !greenBorder[1].activeInHierarchy && !greenBorder[2].activeInHierarchy
+                    && !greenBorder[3].activeInHierarchy)
+                {
+                    /*for (int i = 0; i <= 3; i++)
+                    {
+                        greenButtons[i].interactable = false;
+                    }*/
+                    switch (MainMenuManager.numberOfPlayers)
+                    {
+                        case 2:
+                            playerTurn = "RED";
+                            IntializeDice();
+                            break;
+                    }
                 }
                 break;
         }
