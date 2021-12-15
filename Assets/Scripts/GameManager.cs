@@ -96,6 +96,81 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GameMenu");
     }
 
+    public void DiceRoll()
+    {
+        SoundManager.diceAudioSource.Play();
+        diceButton.interactable = false;
+        DiceNumAnimation = randomNum.Next(1,7);
+
+        switch (DiceNumAnimation)
+        {
+            case 1:
+                diceAnimations[0].SetActive(true);
+                for(int i = 1; i <= 5; i++)
+                {
+                    diceAnimations[i].SetActive(false);
+                }
+                break;
+
+            case 2:
+                for (int i = 0; i <= 5; i++)
+                {
+                    if (i == 1)
+                    {
+                        diceAnimations[i].SetActive(true);
+                        i++;
+                    }
+                    diceAnimations[i].SetActive(false);
+                }
+                break;
+
+            case 3:
+                for (int i = 0; i <= 5; i++)
+                {
+                    if (i == 2)
+                    {
+                        diceAnimations[i].SetActive(true);
+                        i++;
+                    }
+                    diceAnimations[i].SetActive(false);
+                }
+                break;
+
+            case 4:
+                for (int i = 0; i <= 5; i++)
+                {
+                    if (i == 3)
+                    {
+                        diceAnimations[i].SetActive(true);
+                        i++;
+                    }
+                    diceAnimations[i].SetActive(false);
+                }
+                break;
+
+            case 5:
+                for (int i = 0; i <= 5; i++)
+                {
+                    if (i == 4)
+                    {
+                        diceAnimations[i].SetActive(true);
+                        i++;
+                    }
+                    diceAnimations[i].SetActive(false);
+                }
+                break;
+
+            case 6:
+                diceAnimations[5].SetActive(true);
+                for (int i = 0; i <= 4;i++)
+                {
+                    
+                        diceAnimations[i].SetActive(false);
+                }
+                break;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
