@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 9436021}
   - component: {fileID: 9436025}
   m_Layer: 5
-  m_Name: Red_Player-2
+  m_Name: Red_Token-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,7 +373,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9436023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: RedToken2Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &46320674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1177,7 @@ RectTransform:
   - {fileID: 2125742715}
   - {fileID: 893435370}
   m_Father: {fileID: 1124380627}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1556,7 +1567,7 @@ GameObject:
   - component: {fileID: 212885176}
   - component: {fileID: 212885180}
   m_Layer: 5
-  m_Name: Blue_Player-1
+  m_Name: Blue_Token-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1703,7 +1714,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 212885178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: BlueToken1Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &213876615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1741,7 @@ GameObject:
   - component: {fileID: 213876617}
   - component: {fileID: 213876621}
   m_Layer: 5
-  m_Name: Blue_Player-2
+  m_Name: Blue_Token-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1866,7 +1888,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 213876619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: BlueToken2Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &234875081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,6 +1911,7 @@ GameObject:
   - component: {fileID: 234875082}
   - component: {fileID: 234875084}
   - component: {fileID: 234875083}
+  - component: {fileID: 234875085}
   m_Layer: 5
   m_Name: Border-3
   m_TagString: Untagged
@@ -1939,6 +1973,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234875081}
   m_CullTransparentMesh: 0
+--- !u!114 &234875085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234875081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &245360999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,6 +2033,7 @@ GameObject:
   - component: {fileID: 245361000}
   - component: {fileID: 245361002}
   - component: {fileID: 245361001}
+  - component: {fileID: 245361003}
   m_Layer: 5
   m_Name: Border-1
   m_TagString: Untagged
@@ -2011,6 +2095,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245360999}
   m_CullTransparentMesh: 0
+--- !u!114 &245361003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245360999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &257754651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,6 +2155,7 @@ GameObject:
   - component: {fileID: 257754652}
   - component: {fileID: 257754654}
   - component: {fileID: 257754653}
+  - component: {fileID: 257754655}
   m_Layer: 5
   m_Name: Border-2
   m_TagString: Untagged
@@ -2083,6 +2217,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257754651}
   m_CullTransparentMesh: 0
+--- !u!114 &257754655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257754651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &272381296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,7 +2965,7 @@ GameObject:
   - component: {fileID: 395433023}
   - component: {fileID: 395433027}
   m_Layer: 5
-  m_Name: Red_Player-3
+  m_Name: Red_Token-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2929,7 +3112,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 395433025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: RedToken3Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &405335913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3458,7 +3652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454923740}
   m_Layer: 5
-  m_Name: Red Players
+  m_Name: Red Tokens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3498,6 +3692,7 @@ GameObject:
   - component: {fileID: 502954424}
   - component: {fileID: 502954426}
   - component: {fileID: 502954425}
+  - component: {fileID: 502954427}
   m_Layer: 5
   m_Name: Border-1
   m_TagString: Untagged
@@ -3559,6 +3754,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502954423}
   m_CullTransparentMesh: 0
+--- !u!114 &502954427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502954423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &505215533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,6 +4334,7 @@ GameObject:
   - component: {fileID: 591170648}
   - component: {fileID: 591170650}
   - component: {fileID: 591170649}
+  - component: {fileID: 591170651}
   m_Layer: 5
   m_Name: Border-2
   m_TagString: Untagged
@@ -4151,6 +4396,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591170647}
   m_CullTransparentMesh: 0
+--- !u!114 &591170651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591170647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &648352130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4162,6 +4456,7 @@ GameObject:
   - component: {fileID: 648352131}
   - component: {fileID: 648352133}
   - component: {fileID: 648352132}
+  - component: {fileID: 648352134}
   m_Layer: 5
   m_Name: Border-4
   m_TagString: Untagged
@@ -4223,6 +4518,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648352130}
   m_CullTransparentMesh: 0
+--- !u!114 &648352134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648352130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &650491751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,6 +4967,7 @@ GameObject:
   - component: {fileID: 685921710}
   - component: {fileID: 685921712}
   - component: {fileID: 685921711}
+  - component: {fileID: 685921713}
   m_Layer: 5
   m_Name: Border-3
   m_TagString: Untagged
@@ -4684,6 +5029,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685921709}
   m_CullTransparentMesh: 0
+--- !u!114 &685921713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685921709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &693332314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4851,22 +5245,22 @@ MonoBehaviour:
   - {fileID: 591170647}
   - {fileID: 1885323932}
   - {fileID: 795546655}
-  redPlayersPos:
+  redTokensPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  bluePlayersPos:
+  blueTokensPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  greenPlayersPos:
+  greenTokensPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  yellowPlayersPos:
+  yellowTokensPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4901,22 +5295,22 @@ MonoBehaviour:
   - {fileID: 1863097418}
   - {fileID: 1710266154}
   - {fileID: 1396066039}
-  redPlayers:
+  redTokens:
   - {fileID: 1595841440}
   - {fileID: 9436019}
   - {fileID: 395433021}
   - {fileID: 1760156638}
-  bluePlayers:
+  blueTokens:
   - {fileID: 212885174}
   - {fileID: 213876615}
   - {fileID: 942650900}
   - {fileID: 1695224360}
-  greenPlayers:
+  greenTokens:
   - {fileID: 1281128949}
   - {fileID: 1748627110}
   - {fileID: 1878291981}
   - {fileID: 723010321}
-  yellowPlayers:
+  yellowTokens:
   - {fileID: 1425242157}
   - {fileID: 2140781406}
   - {fileID: 892228637}
@@ -5317,7 +5711,7 @@ GameObject:
   - component: {fileID: 723010323}
   - component: {fileID: 723010327}
   m_Layer: 5
-  m_Name: Green_Player-4
+  m_Name: Green_Token-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5464,7 +5858,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723010325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: GreenToken4Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &728505667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5865,6 +6270,7 @@ GameObject:
   - component: {fileID: 786827389}
   - component: {fileID: 786827391}
   - component: {fileID: 786827390}
+  - component: {fileID: 786827392}
   m_Layer: 5
   m_Name: Border-2
   m_TagString: Untagged
@@ -5926,6 +6332,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786827388}
   m_CullTransparentMesh: 0
+--- !u!114 &786827392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786827388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &788689348
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,6 +6458,7 @@ GameObject:
   - component: {fileID: 795546656}
   - component: {fileID: 795546658}
   - component: {fileID: 795546657}
+  - component: {fileID: 795546659}
   m_Layer: 5
   m_Name: Border-4
   m_TagString: Untagged
@@ -6064,6 +6520,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795546655}
   m_CullTransparentMesh: 0
+--- !u!114 &795546659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795546655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &802873521
 GameObject:
   m_ObjectHideFlags: 0
@@ -6457,7 +6962,7 @@ RectTransform:
   - {fileID: 2055450033}
   - {fileID: 193860512}
   m_Father: {fileID: 1124380627}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6479,7 +6984,7 @@ GameObject:
   - component: {fileID: 892228639}
   - component: {fileID: 892228643}
   m_Layer: 5
-  m_Name: Yellow_Player-3
+  m_Name: Yellow_Token-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6626,7 +7131,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892228641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: YellowToken3Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &893435369
 GameObject:
   m_ObjectHideFlags: 0
@@ -7160,7 +7676,7 @@ GameObject:
   - component: {fileID: 942650902}
   - component: {fileID: 942650906}
   m_Layer: 5
-  m_Name: Blue_Player-3
+  m_Name: Blue_Token-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7307,7 +7823,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 942650904}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: BlueToken3Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &950663857
 GameObject:
   m_ObjectHideFlags: 0
@@ -7714,6 +8241,7 @@ GameObject:
   - component: {fileID: 1003276138}
   - component: {fileID: 1003276140}
   - component: {fileID: 1003276139}
+  - component: {fileID: 1003276141}
   m_Layer: 5
   m_Name: Border-3
   m_TagString: Untagged
@@ -7775,6 +8303,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003276137}
   m_CullTransparentMesh: 0
+--- !u!114 &1003276141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003276137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1008655733
 GameObject:
   m_ObjectHideFlags: 0
@@ -8060,7 +8637,7 @@ GameObject:
   - component: {fileID: 1032626328}
   - component: {fileID: 1032626332}
   m_Layer: 5
-  m_Name: Yellow_Player-4
+  m_Name: Yellow_Token-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8207,7 +8784,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1032626330}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: YellowToken4Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1033760852
 GameObject:
   m_ObjectHideFlags: 0
@@ -8416,7 +9004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047317326}
   m_Layer: 5
-  m_Name: Blue Players
+  m_Name: Blue Tokens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8924,6 +9512,7 @@ GameObject:
   - component: {fileID: 1110369958}
   - component: {fileID: 1110369960}
   - component: {fileID: 1110369959}
+  - component: {fileID: 1110369961}
   m_Layer: 5
   m_Name: Border-1
   m_TagString: Untagged
@@ -8985,6 +9574,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110369957}
   m_CullTransparentMesh: 0
+--- !u!114 &1110369961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110369957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1116966975
 GameObject:
   m_ObjectHideFlags: 0
@@ -9182,9 +9820,9 @@ RectTransform:
   - {fileID: 1487429028}
   - {fileID: 2003746394}
   - {fileID: 897644978}
+  - {fileID: 825105570}
   - {fileID: 145857694}
   - {fileID: 1553168212}
-  - {fileID: 825105570}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9748,7 +10386,7 @@ GameObject:
   - component: {fileID: 1281128951}
   - component: {fileID: 1281128955}
   m_Layer: 5
-  m_Name: Green_Player-1
+  m_Name: Green_Token-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9895,7 +10533,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1281128953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: GreenToken1Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1336918351
 GameObject:
   m_ObjectHideFlags: 0
@@ -9907,6 +10556,7 @@ GameObject:
   - component: {fileID: 1336918352}
   - component: {fileID: 1336918354}
   - component: {fileID: 1336918353}
+  - component: {fileID: 1336918355}
   m_Layer: 5
   m_Name: Border-2
   m_TagString: Untagged
@@ -9968,6 +10618,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336918351}
   m_CullTransparentMesh: 0
+--- !u!114 &1336918355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336918351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1344621549
 GameObject:
   m_ObjectHideFlags: 0
@@ -10536,7 +11235,7 @@ GameObject:
   - component: {fileID: 1425242159}
   - component: {fileID: 1425242163}
   m_Layer: 5
-  m_Name: Yellow_Player-1
+  m_Name: Yellow_Token-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10683,7 +11382,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1425242161}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: YellowToken1Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1436900766
 GameObject:
   m_ObjectHideFlags: 0
@@ -10918,7 +11628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487429028}
   m_Layer: 5
-  m_Name: Yellow Players
+  m_Name: Yellow Tokens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11136,6 +11846,7 @@ GameObject:
   - component: {fileID: 1520002681}
   - component: {fileID: 1520002683}
   - component: {fileID: 1520002682}
+  - component: {fileID: 1520002684}
   m_Layer: 5
   m_Name: Border-1
   m_TagString: Untagged
@@ -11197,6 +11908,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520002680}
   m_CullTransparentMesh: 0
+--- !u!114 &1520002684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520002680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1523834503
 GameObject:
   m_ObjectHideFlags: 0
@@ -11429,7 +12189,7 @@ RectTransform:
   - {fileID: 523740061}
   - {fileID: 1709391673}
   m_Father: {fileID: 1124380627}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11553,7 +12313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1565390698}
   m_Layer: 5
-  m_Name: Green Players
+  m_Name: Green Tokens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11696,7 +12456,7 @@ GameObject:
   - component: {fileID: 1595841442}
   - component: {fileID: 1595841446}
   m_Layer: 5
-  m_Name: Red_Player-1
+  m_Name: Red_Token-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11843,7 +12603,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1595841444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: RedToken1Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1611535997
 GameObject:
   m_ObjectHideFlags: 0
@@ -12010,6 +12781,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5966438432621550904, guid: a9e426f3f314417469e92c1db816ca40,
+        type: 3}
+      propertyPath: playerAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ec5281ef62c492448c61020180643b8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9e426f3f314417469e92c1db816ca40, type: 3}
 --- !u!1 &1648699496
@@ -12023,6 +12799,7 @@ GameObject:
   - component: {fileID: 1648699497}
   - component: {fileID: 1648699499}
   - component: {fileID: 1648699498}
+  - component: {fileID: 1648699500}
   m_Layer: 5
   m_Name: Border-4
   m_TagString: Untagged
@@ -12084,6 +12861,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648699496}
   m_CullTransparentMesh: 0
+--- !u!114 &1648699500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648699496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1659172439
 GameObject:
   m_ObjectHideFlags: 0
@@ -12508,7 +13334,7 @@ GameObject:
   - component: {fileID: 1695224362}
   - component: {fileID: 1695224366}
   m_Layer: 5
-  m_Name: Blue_Player-4
+  m_Name: Blue_Token-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12655,7 +13481,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1695224364}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: BlueToken4Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1706464562
 GameObject:
   m_ObjectHideFlags: 0
@@ -12966,7 +13803,7 @@ GameObject:
   - component: {fileID: 1748627112}
   - component: {fileID: 1748627116}
   m_Layer: 5
-  m_Name: Green_Player-2
+  m_Name: Green_Token-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13113,7 +13950,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1748627114}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: GreenToken2Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1756706164
 GameObject:
   m_ObjectHideFlags: 0
@@ -13228,7 +14076,7 @@ GameObject:
   - component: {fileID: 1760156640}
   - component: {fileID: 1760156644}
   m_Layer: 5
-  m_Name: Red_Player-4
+  m_Name: Red_Token-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13375,7 +14223,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1760156642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: RedToken4Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1767023304
 GameObject:
   m_ObjectHideFlags: 0
@@ -13387,6 +14246,7 @@ GameObject:
   - component: {fileID: 1767023305}
   - component: {fileID: 1767023307}
   - component: {fileID: 1767023306}
+  - component: {fileID: 1767023308}
   m_Layer: 5
   m_Name: Border-4
   m_TagString: Untagged
@@ -13448,6 +14308,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767023304}
   m_CullTransparentMesh: 0
+--- !u!114 &1767023308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767023304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1768374889
 GameObject:
   m_ObjectHideFlags: 0
@@ -14174,7 +15083,7 @@ GameObject:
   - component: {fileID: 1878291983}
   - component: {fileID: 1878291987}
   m_Layer: 5
-  m_Name: Green_Player-3
+  m_Name: Green_Token-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14321,7 +15230,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1878291985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: GreenToken3Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1885323932
 GameObject:
   m_ObjectHideFlags: 0
@@ -14333,6 +15253,7 @@ GameObject:
   - component: {fileID: 1885323933}
   - component: {fileID: 1885323935}
   - component: {fileID: 1885323934}
+  - component: {fileID: 1885323936}
   m_Layer: 5
   m_Name: Border-3
   m_TagString: Untagged
@@ -14394,6 +15315,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885323932}
   m_CullTransparentMesh: 0
+--- !u!114 &1885323936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885323932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe1355469f9d4a8d8399e46358cccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: 
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - z
+  - time
+  - speed
+  - easetype
+  - looptype
+  indexes: 0000000001000000020000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 20
+  - 0.5
+  - 120
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1895760606
 GameObject:
   m_ObjectHideFlags: 0
@@ -16036,7 +17006,7 @@ GameObject:
   - component: {fileID: 2140781408}
   - component: {fileID: 2140781412}
   m_Layer: 5
-  m_Name: Yellow_Player-2
+  m_Name: Yellow_Token-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16183,4 +17153,15 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2140781410}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702864855}
+        m_MethodName: YellowToken2Movement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
