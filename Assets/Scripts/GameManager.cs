@@ -584,33 +584,33 @@ public class GameManager : MonoBehaviour
                         if (currentPlayer == YellowToken1.yellowToken1Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[0].transform.position = greenTokensPos[0];
+                            yellowTokens[0].transform.position = yellowTokensPos[0];
                             YellowToken1.yellowToken1Collider = "none";
-                            greenSteps[0] = 0;
+                            yellowSteps[0] = 0;
                             playerTurn = "RED";
                         }
                         if (currentPlayer == YellowToken2.yellowToken2Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[1].transform.position = greenTokensPos[1];
+                            yellowTokens[1].transform.position = yellowTokensPos[1];
                             YellowToken2.yellowToken2Collider = "none";
-                            greenSteps[1] = 0;
+                            yellowSteps[1] = 0;
                             playerTurn = "RED";
                         }
                         if (currentPlayer == YellowToken3.yellowToken3Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[2].transform.position = greenTokensPos[2];
+                            yellowTokens[2].transform.position = yellowTokensPos[2];
                             YellowToken3.yellowToken3Collider = "none";
-                            greenSteps[2] = 0;
+                            yellowSteps[2] = 0;
                             playerTurn = "RED";
                         }
                         if (currentPlayer == YellowToken4.yellowToken4Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[3].transform.position = greenTokensPos[3];
+                            yellowTokens[3].transform.position = yellowTokensPos[3];
                             YellowToken4.yellowToken4Collider = "none";
-                            greenSteps[3] = 0;
+                            yellowSteps[3] = 0;
                             playerTurn = "RED";
                         }
                     }
@@ -651,33 +651,33 @@ public class GameManager : MonoBehaviour
                         if (currentPlayer == YellowToken1.yellowToken1Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[0].transform.position = greenTokensPos[0];
+                            yellowTokens[0].transform.position = yellowTokensPos[0];
                             YellowToken1.yellowToken1Collider = "none";
-                            greenSteps[0] = 0;
+                            yellowSteps[0] = 0;
                             playerTurn = "BLUE";
                         }
                         if (currentPlayer == YellowToken2.yellowToken2Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[1].transform.position = greenTokensPos[1];
+                            yellowTokens[1].transform.position = yellowTokensPos[1];
                             YellowToken2.yellowToken2Collider = "none";
-                            greenSteps[1] = 0;
+                            yellowSteps[1] = 0;
                             playerTurn = "BLUE";
                         }
                         if (currentPlayer == YellowToken3.yellowToken3Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[2].transform.position = greenTokensPos[2];
+                            yellowTokens[2].transform.position = yellowTokensPos[2];
                             YellowToken3.yellowToken3Collider = "none";
-                            greenSteps[2] = 0;
+                            yellowSteps[2] = 0;
                             playerTurn = "BLUE";
                         }
                         if (currentPlayer == YellowToken4.yellowToken4Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[3].transform.position = greenTokensPos[3];
+                            yellowTokens[3].transform.position = yellowTokensPos[3];
                             YellowToken4.yellowToken4Collider = "none";
-                            greenSteps[3] = 0;
+                            yellowSteps[3] = 0;
                             playerTurn = "BLUE";
                         }
                         if (currentPlayer == RedToken1.redToken1Collider && currentPlayer != "Safe_Spot")
@@ -718,33 +718,33 @@ public class GameManager : MonoBehaviour
                         if (currentPlayer == YellowToken1.yellowToken1Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[0].transform.position = greenTokensPos[0];
+                            yellowTokens[0].transform.position = yellowTokensPos[0];
                             YellowToken1.yellowToken1Collider = "none";
-                            greenSteps[0] = 0;
+                            yellowSteps[0] = 0;
                             playerTurn = "GREEN";
                         }
                         if (currentPlayer == YellowToken2.yellowToken2Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[1].transform.position = greenTokensPos[1];
+                            yellowTokens[1].transform.position = yellowTokensPos[1];
                             YellowToken2.yellowToken2Collider = "none";
-                            greenSteps[1] = 0;
+                            yellowSteps[1] = 0;
                             playerTurn = "GREEN";
                         }
                         if (currentPlayer == YellowToken3.yellowToken3Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[2].transform.position = greenTokensPos[2];
+                            yellowTokens[2].transform.position = yellowTokensPos[2];
                             YellowToken3.yellowToken3Collider = "none";
-                            greenSteps[2] = 0;
+                            yellowSteps[2] = 0;
                             playerTurn = "GREEN";
                         }
                         if (currentPlayer == YellowToken4.yellowToken4Collider && currentPlayer != "Safe_Spot")
                         {
                             SoundManager.dismissalAudioSource.Play();
-                            greenTokens[3].transform.position = greenTokensPos[3];
+                            yellowTokens[3].transform.position = yellowTokensPos[3];
                             YellowToken4.yellowToken4Collider = "none";
-                            greenSteps[3] = 0;
+                            yellowSteps[3] = 0;
                             playerTurn = "GREEN";
                         }
                         if (currentPlayer == RedToken1.redToken1Collider && currentPlayer != "Safe_Spot")
