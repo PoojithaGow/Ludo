@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 7789295}
   m_Layer: 5
   m_Name: Red-3
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 9436022}
   - component: {fileID: 9436021}
   - component: {fileID: 9436025}
+  - component: {fileID: 9436026}
   m_Layer: 5
   m_Name: Red_Token-2
   m_TagString: Untagged
@@ -385,6 +386,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9436026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9436019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e0010f77838b549961b0a8183af4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &46320674
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,8 +503,8 @@ GameObject:
   - component: {fileID: 54474925}
   - component: {fileID: 54474924}
   m_Layer: 5
-  m_Name: Safe_Spot-2
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,7 +603,7 @@ GameObject:
   - component: {fileID: 59806210}
   m_Layer: 5
   m_Name: Path-29
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +702,7 @@ GameObject:
   - component: {fileID: 66883212}
   m_Layer: 5
   m_Name: Path-43
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -787,8 +800,8 @@ GameObject:
   - component: {fileID: 88322647}
   - component: {fileID: 88322646}
   m_Layer: 5
-  m_Name: Safe_Spot-8
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,7 +900,7 @@ GameObject:
   - component: {fileID: 111065080}
   m_Layer: 5
   m_Name: Path-22
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -985,8 +998,8 @@ GameObject:
   - component: {fileID: 134128017}
   - component: {fileID: 134128016}
   m_Layer: 5
-  m_Name: Safe_Spot-6
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1233,7 +1246,7 @@ GameObject:
   - component: {fileID: 167686734}
   m_Layer: 5
   m_Name: Path-19
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1332,7 +1345,7 @@ GameObject:
   - component: {fileID: 184471405}
   m_Layer: 5
   m_Name: Path-9
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1566,6 +1579,7 @@ GameObject:
   - component: {fileID: 212885177}
   - component: {fileID: 212885176}
   - component: {fileID: 212885180}
+  - component: {fileID: 212885181}
   m_Layer: 5
   m_Name: Blue_Token-1
   m_TagString: Untagged
@@ -1726,6 +1740,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &212885181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212885174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d646cf11df38d4681a18a6ea20f444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &213876615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1766,7 @@ GameObject:
   - component: {fileID: 213876618}
   - component: {fileID: 213876617}
   - component: {fileID: 213876621}
+  - component: {fileID: 213876622}
   m_Layer: 5
   m_Name: Blue_Token-2
   m_TagString: Untagged
@@ -1900,6 +1927,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &213876622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213876615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07071275e0286814c8cf86ceae5416d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &234875081
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,7 +2391,7 @@ GameObject:
   - component: {fileID: 318845991}
   m_Layer: 5
   m_Name: Path-11
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2450,8 +2489,8 @@ GameObject:
   - component: {fileID: 319784629}
   - component: {fileID: 319784628}
   m_Layer: 5
-  m_Name: Safe_Spot-3
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2550,7 +2589,7 @@ GameObject:
   - component: {fileID: 326744226}
   m_Layer: 5
   m_Name: Path-6
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2649,7 +2688,7 @@ GameObject:
   - component: {fileID: 351280506}
   m_Layer: 5
   m_Name: Path-17
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2748,7 +2787,7 @@ GameObject:
   - component: {fileID: 353050535}
   m_Layer: 5
   m_Name: Blue-5
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2964,6 +3003,7 @@ GameObject:
   - component: {fileID: 395433024}
   - component: {fileID: 395433023}
   - component: {fileID: 395433027}
+  - component: {fileID: 395433028}
   m_Layer: 5
   m_Name: Red_Token-3
   m_TagString: Untagged
@@ -3124,6 +3164,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &395433028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395433021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82cc7bf108d74047a24eca70a2e84d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &405335913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,7 +3354,7 @@ GameObject:
   - component: {fileID: 416884585}
   m_Layer: 5
   m_Name: Path-40
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3557,7 +3609,7 @@ GameObject:
   - component: {fileID: 437114820}
   m_Layer: 5
   m_Name: Path-13
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3817,7 +3869,7 @@ GameObject:
   - component: {fileID: 505215535}
   m_Layer: 5
   m_Name: Path-21
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3916,7 +3968,7 @@ GameObject:
   - component: {fileID: 521697803}
   m_Layer: 5
   m_Name: Yellow-1
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4139,7 +4191,7 @@ GameObject:
   - component: {fileID: 580338607}
   m_Layer: 5
   m_Name: Path-27
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4238,7 +4290,7 @@ GameObject:
   - component: {fileID: 581213397}
   m_Layer: 5
   m_Name: Path-36
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4581,7 +4633,7 @@ GameObject:
   - component: {fileID: 650491753}
   m_Layer: 5
   m_Name: Path-20
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4772,7 +4824,7 @@ GameObject:
   - component: {fileID: 665165592}
   m_Layer: 5
   m_Name: Path-44
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4871,7 +4923,7 @@ GameObject:
   - component: {fileID: 668769615}
   m_Layer: 5
   m_Name: Path-7
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5092,7 +5144,7 @@ GameObject:
   - component: {fileID: 693332316}
   m_Layer: 5
   m_Name: Green-3
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5572,7 +5624,7 @@ GameObject:
   - component: {fileID: 705520423}
   m_Layer: 5
   m_Name: Red-1
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5710,6 +5762,7 @@ GameObject:
   - component: {fileID: 723010324}
   - component: {fileID: 723010323}
   - component: {fileID: 723010327}
+  - component: {fileID: 723010328}
   m_Layer: 5
   m_Name: Green_Token-4
   m_TagString: Untagged
@@ -5870,6 +5923,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &723010328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723010321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ca2c8346df9c242a77e4d1d1945713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &728505667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5884,7 +5949,7 @@ GameObject:
   - component: {fileID: 728505669}
   m_Layer: 5
   m_Name: Green-4
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6075,7 +6140,7 @@ GameObject:
   - component: {fileID: 757046966}
   m_Layer: 5
   m_Name: Path-3
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6174,7 +6239,7 @@ GameObject:
   - component: {fileID: 782218042}
   m_Layer: 5
   m_Name: Path-39
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6655,7 +6720,7 @@ GameObject:
   - component: {fileID: 810481448}
   m_Layer: 5
   m_Name: Path-18
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6754,7 +6819,7 @@ GameObject:
   - component: {fileID: 821841138}
   m_Layer: 5
   m_Name: Path-24
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6983,6 +7048,7 @@ GameObject:
   - component: {fileID: 892228640}
   - component: {fileID: 892228639}
   - component: {fileID: 892228643}
+  - component: {fileID: 892228644}
   m_Layer: 5
   m_Name: Yellow_Token-3
   m_TagString: Untagged
@@ -7143,6 +7209,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &892228644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892228637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c3291878f19424f8b576cb73ff5145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &893435369
 GameObject:
   m_ObjectHideFlags: 0
@@ -7405,7 +7483,7 @@ GameObject:
   - component: {fileID: 916760096}
   m_Layer: 5
   m_Name: Path-15
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7504,7 +7582,7 @@ GameObject:
   - component: {fileID: 917318919}
   m_Layer: 5
   m_Name: Safe_Blue_House
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7675,6 +7753,7 @@ GameObject:
   - component: {fileID: 942650903}
   - component: {fileID: 942650902}
   - component: {fileID: 942650906}
+  - component: {fileID: 942650907}
   m_Layer: 5
   m_Name: Blue_Token-3
   m_TagString: Untagged
@@ -7835,6 +7914,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &942650907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942650900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7316e3678a684428698bc476be6b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &950663857
 GameObject:
   m_ObjectHideFlags: 0
@@ -7848,8 +7939,8 @@ GameObject:
   - component: {fileID: 950663860}
   - component: {fileID: 950663859}
   m_Layer: 5
-  m_Name: Safe_Spot-5
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7948,7 +8039,7 @@ GameObject:
   - component: {fileID: 980916178}
   m_Layer: 5
   m_Name: Path-30
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8047,7 +8138,7 @@ GameObject:
   - component: {fileID: 988447523}
   m_Layer: 5
   m_Name: Path-38
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8366,7 +8457,7 @@ GameObject:
   - component: {fileID: 1008655735}
   m_Layer: 5
   m_Name: Path-42
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8537,7 +8628,7 @@ GameObject:
   - component: {fileID: 1024178368}
   m_Layer: 5
   m_Name: Path-41
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8636,6 +8727,7 @@ GameObject:
   - component: {fileID: 1032626329}
   - component: {fileID: 1032626328}
   - component: {fileID: 1032626332}
+  - component: {fileID: 1032626333}
   m_Layer: 5
   m_Name: Yellow_Token-4
   m_TagString: Untagged
@@ -8796,6 +8888,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1032626333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032626326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9bc712ba4487b42ac53543c2a265e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1033760852
 GameObject:
   m_ObjectHideFlags: 0
@@ -8810,7 +8914,7 @@ GameObject:
   - component: {fileID: 1033760854}
   m_Layer: 5
   m_Name: Path-23
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8909,7 +9013,7 @@ GameObject:
   - component: {fileID: 1044290304}
   m_Layer: 5
   m_Name: Path-12
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9047,7 +9151,7 @@ GameObject:
   - component: {fileID: 1055266643}
   m_Layer: 5
   m_Name: Path-5
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9146,7 +9250,7 @@ GameObject:
   - component: {fileID: 1068836915}
   m_Layer: 5
   m_Name: Path-32
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9245,7 +9349,7 @@ GameObject:
   - component: {fileID: 1080527689}
   m_Layer: 5
   m_Name: Path-4
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9344,7 +9448,7 @@ GameObject:
   - component: {fileID: 1099196597}
   m_Layer: 5
   m_Name: Red-5
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9637,7 +9741,7 @@ GameObject:
   - component: {fileID: 1116966977}
   m_Layer: 5
   m_Name: Red-4
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9845,7 +9949,7 @@ GameObject:
   - component: {fileID: 1142484949}
   m_Layer: 5
   m_Name: Green-5
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9944,7 +10048,7 @@ GameObject:
   - component: {fileID: 1164975698}
   m_Layer: 5
   m_Name: Yellow-4
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10186,8 +10290,8 @@ GameObject:
   - component: {fileID: 1278878124}
   - component: {fileID: 1278878123}
   m_Layer: 5
-  m_Name: Safe_Spot-7
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10286,7 +10390,7 @@ GameObject:
   - component: {fileID: 1278985156}
   m_Layer: 5
   m_Name: Path-8
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10385,6 +10489,7 @@ GameObject:
   - component: {fileID: 1281128952}
   - component: {fileID: 1281128951}
   - component: {fileID: 1281128955}
+  - component: {fileID: 1281128956}
   m_Layer: 5
   m_Name: Green_Token-1
   m_TagString: Untagged
@@ -10545,6 +10650,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1281128956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281128949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8e0f1447d2596428c3a7e6b150feb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1336918351
 GameObject:
   m_ObjectHideFlags: 0
@@ -10793,7 +10910,7 @@ GameObject:
   - component: {fileID: 1363002607}
   m_Layer: 5
   m_Name: Red-2
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10892,7 +11009,7 @@ GameObject:
   - component: {fileID: 1373038980}
   m_Layer: 5
   m_Name: Path-26
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11134,8 +11251,8 @@ GameObject:
   - component: {fileID: 1407499911}
   - component: {fileID: 1407499913}
   m_Layer: 5
-  m_Name: Safe_Spot-1
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11234,6 +11351,7 @@ GameObject:
   - component: {fileID: 1425242160}
   - component: {fileID: 1425242159}
   - component: {fileID: 1425242163}
+  - component: {fileID: 1425242164}
   m_Layer: 5
   m_Name: Yellow_Token-1
   m_TagString: Untagged
@@ -11394,6 +11512,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1425242164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425242157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e63c38f70c7368448f2e9c8e3f0f07e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1436900766
 GameObject:
   m_ObjectHideFlags: 0
@@ -11408,7 +11538,7 @@ GameObject:
   - component: {fileID: 1436900768}
   m_Layer: 5
   m_Name: Green-2
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11585,7 +11715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1480097590}
   m_Layer: 5
-  m_Name: Safe-Spot
+  m_Name: Safe-Zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11711,7 +11841,7 @@ GameObject:
   - component: {fileID: 1511847298}
   m_Layer: 5
   m_Name: Path-35
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11971,7 +12101,7 @@ GameObject:
   - component: {fileID: 1523834505}
   m_Layer: 5
   m_Name: Path-28
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12070,7 +12200,7 @@ GameObject:
   - component: {fileID: 1548658884}
   m_Layer: 5
   m_Name: Path-10
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12356,7 +12486,7 @@ GameObject:
   - component: {fileID: 1594714336}
   m_Layer: 5
   m_Name: Path-34
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12455,6 +12585,7 @@ GameObject:
   - component: {fileID: 1595841443}
   - component: {fileID: 1595841442}
   - component: {fileID: 1595841446}
+  - component: {fileID: 1595841447}
   m_Layer: 5
   m_Name: Red_Token-1
   m_TagString: Untagged
@@ -12615,6 +12746,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1595841447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595841440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ac24d361481fd4d8545541cdb32f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1611535997
 GameObject:
   m_ObjectHideFlags: 0
@@ -12629,7 +12772,7 @@ GameObject:
   - component: {fileID: 1611535999}
   m_Layer: 5
   m_Name: Yellow-5
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12964,7 +13107,7 @@ GameObject:
   - component: {fileID: 1661830131}
   m_Layer: 5
   m_Name: Path-2
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13063,7 +13206,7 @@ GameObject:
   - component: {fileID: 1680790419}
   m_Layer: 5
   m_Name: Blue-3
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13162,7 +13305,7 @@ GameObject:
   - component: {fileID: 1684318651}
   m_Layer: 5
   m_Name: Safe_Yellow_House
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13333,6 +13476,7 @@ GameObject:
   - component: {fileID: 1695224363}
   - component: {fileID: 1695224362}
   - component: {fileID: 1695224366}
+  - component: {fileID: 1695224367}
   m_Layer: 5
   m_Name: Blue_Token-4
   m_TagString: Untagged
@@ -13493,6 +13637,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1695224367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695224360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80611c645ae662342a62dc1d046a597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706464562
 GameObject:
   m_ObjectHideFlags: 0
@@ -13507,7 +13663,7 @@ GameObject:
   - component: {fileID: 1706464564}
   m_Layer: 5
   m_Name: Yellow-2
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13802,6 +13958,7 @@ GameObject:
   - component: {fileID: 1748627113}
   - component: {fileID: 1748627112}
   - component: {fileID: 1748627116}
+  - component: {fileID: 1748627117}
   m_Layer: 5
   m_Name: Green_Token-2
   m_TagString: Untagged
@@ -13962,6 +14119,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1748627117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748627110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571b33d475fe2cf429b05b6349a18602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1756706164
 GameObject:
   m_ObjectHideFlags: 0
@@ -13976,7 +14145,7 @@ GameObject:
   - component: {fileID: 1756706166}
   m_Layer: 5
   m_Name: Path-33
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14075,6 +14244,7 @@ GameObject:
   - component: {fileID: 1760156641}
   - component: {fileID: 1760156640}
   - component: {fileID: 1760156644}
+  - component: {fileID: 1760156645}
   m_Layer: 5
   m_Name: Red_Token-4
   m_TagString: Untagged
@@ -14235,6 +14405,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1760156645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760156638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113db447c823e774ca60e4ef9e0e9673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1767023304
 GameObject:
   m_ObjectHideFlags: 0
@@ -14443,7 +14625,7 @@ GameObject:
   - component: {fileID: 1784405449}
   m_Layer: 5
   m_Name: Path-25
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14541,8 +14723,8 @@ GameObject:
   - component: {fileID: 1798089490}
   - component: {fileID: 1798089489}
   m_Layer: 5
-  m_Name: Safe_Spot-4
-  m_TagString: Untagged
+  m_Name: Safe_Spot
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14641,7 +14823,7 @@ GameObject:
   - component: {fileID: 1817826214}
   m_Layer: 5
   m_Name: Path-37
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14812,7 +14994,7 @@ GameObject:
   - component: {fileID: 1839316272}
   m_Layer: 5
   m_Name: Path-16
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14911,7 +15093,7 @@ GameObject:
   - component: {fileID: 1840569698}
   m_Layer: 5
   m_Name: Blue-2
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15082,6 +15264,7 @@ GameObject:
   - component: {fileID: 1878291984}
   - component: {fileID: 1878291983}
   - component: {fileID: 1878291987}
+  - component: {fileID: 1878291988}
   m_Layer: 5
   m_Name: Green_Token-3
   m_TagString: Untagged
@@ -15242,6 +15425,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1878291988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878291981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2159bc608ba648a45b322e7fcf9c0503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1885323932
 GameObject:
   m_ObjectHideFlags: 0
@@ -15378,7 +15573,7 @@ GameObject:
   - component: {fileID: 1895760608}
   m_Layer: 5
   m_Name: Path-14
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15549,7 +15744,7 @@ GameObject:
   - component: {fileID: 1924952296}
   m_Layer: 5
   m_Name: Safe_Red_House
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15720,7 +15915,7 @@ GameObject:
   - component: {fileID: 1975897162}
   m_Layer: 5
   m_Name: Yellow-3
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15819,7 +16014,7 @@ GameObject:
   - component: {fileID: 1975955645}
   m_Layer: 5
   m_Name: Path-31
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15918,7 +16113,7 @@ GameObject:
   - component: {fileID: 1983865538}
   m_Layer: 5
   m_Name: Blue-4
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16341,7 +16536,7 @@ GameObject:
   - component: {fileID: 2079988242}
   m_Layer: 5
   m_Name: Path-1
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16512,7 +16707,7 @@ GameObject:
   - component: {fileID: 2117670691}
   m_Layer: 5
   m_Name: Blue-1
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16611,7 +16806,7 @@ GameObject:
   - component: {fileID: 2118944978}
   m_Layer: 5
   m_Name: Green-1
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16710,7 +16905,7 @@ GameObject:
   - component: {fileID: 2119460030}
   m_Layer: 5
   m_Name: Safe_Green_House
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17005,6 +17200,7 @@ GameObject:
   - component: {fileID: 2140781409}
   - component: {fileID: 2140781408}
   - component: {fileID: 2140781412}
+  - component: {fileID: 2140781413}
   m_Layer: 5
   m_Name: Yellow_Token-2
   m_TagString: Untagged
@@ -17165,3 +17361,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2140781413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140781406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1767b259634c5c4792d1d1f8c7e500a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

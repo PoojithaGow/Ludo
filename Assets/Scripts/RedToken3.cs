@@ -11,7 +11,7 @@ public class RedToken3 : MonoBehaviour
         if (collision.gameObject.tag == "Tile")
         {
             redToken3Collider = collision.gameObject.name;
-            if (collision.gameObject.name.Contains("Red House"))
+            if (collision.gameObject.name.Contains("Safe_Red_House"))
             {
                 SoundManager.safeHouseAudioSource.Play();
             }

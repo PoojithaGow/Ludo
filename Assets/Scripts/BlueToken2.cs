@@ -11,7 +11,7 @@ public class BlueToken2 : MonoBehaviour
         if (collision.gameObject.tag == "Tile")
         {
             blueToken2Collider = collision.gameObject.name;
-            if (collision.gameObject.name.Contains("Blue House"))
+            if (collision.gameObject.name.Contains("Safe_Blue_House"))
             {
                 SoundManager.safeHouseAudioSource.Play();
             }

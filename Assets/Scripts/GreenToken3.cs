@@ -11,7 +11,7 @@ public class GreenToken3 : MonoBehaviour
         if (collision.gameObject.tag == "Tile")
         {
             greenToken3Collider = collision.gameObject.name;
-            if (collision.gameObject.name.Contains("Green House"))
+            if (collision.gameObject.name.Contains("Safe_Green_House"))
             {
                 SoundManager.safeHouseAudioSource.Play();
             }

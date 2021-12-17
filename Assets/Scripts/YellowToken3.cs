@@ -12,7 +12,7 @@ public class YellowToken3 : MonoBehaviour
         if (collision.gameObject.tag == "Tile")
         {
             yellowToken3Collider = collision.gameObject.name;
-            if (collision.gameObject.name.Contains("YellowHouse"))
+            if (collision.gameObject.name.Contains("Safe_Yellow_House"))
             {
                 SoundManager.safeHouseAudioSource.Play();
             }

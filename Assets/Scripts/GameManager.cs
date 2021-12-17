@@ -45,12 +45,6 @@ public class GameManager : MonoBehaviour
     private int[] greenSteps;
     private int[] yellowSteps;
 
-   
-    /*private int red1Steps, red2Steps, red3Steps, red4Steps;
-    private int blue1Steps, blue2Steps, blue3Steps, blue4Steps;
-    private int green1Steps, green2Steps, green3Steps, green4Steps;
-    private int yellow1Steps, yellow2Steps, yellow3Steps, yellow4Steps;*/
-
     public List<GameObject> redMovementBlock = new List<GameObject>();
     public List<GameObject> blueMovementBlock = new List<GameObject>();
     public List<GameObject> greenMovementBlock = new List<GameObject>();
@@ -109,10 +103,820 @@ public class GameManager : MonoBehaviour
         {
             diceAnimations[i].SetActive(false);
         }
-
+        //Winning condition
         switch (MainMenuManager.numberOfPlayers)
         {
-            
+            case 2:
+                if (totalRedInHouse > 3)
+                {
+                    SoundManager.winAudioSource.Play();
+                    individualWinningScreen[0].SetActive(true);
+                    StartCoroutine("GameOver");
+                    playerTurn = "none";
+                }
+                if (totalGreenInHouse > 3)
+                {
+                    SoundManager.winAudioSource.Play();
+                    individualWinningScreen[2].SetActive(true);
+                    StartCoroutine("GameOver");
+                    playerTurn = "none";
+                }
+                break;
+            case 4: 
+                //1 of 4 players wins the game
+                if(totalRedInHouse>3 && totalBlueInHouse<4 && totalGreenInHouse<4 && totalYellowInHouse < 4 && playerTurn=="RED")
+                {
+                    if (!individualWinningScreen[0].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+
+                    individualWinningScreen[0].SetActive(true);
+                    playerTurn = "BLUE";
+                }
+                if (totalBlueInHouse > 3 && totalRedInHouse < 4 && totalGreenInHouse < 4 && totalYellowInHouse < 4 && playerTurn == "BLUE")
+                {
+                    if (!individualWinningScreen[1].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+
+                    individualWinningScreen[1].SetActive(true);
+                    playerTurn = "GREEN";
+                }
+                if (totalGreenInHouse > 3 && totalRedInHouse < 4 && totalBlueInHouse < 4 && totalYellowInHouse < 4 && playerTurn == "GREEN")
+                {
+                    if (!individualWinningScreen[2].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+
+                    individualWinningScreen[2].SetActive(true);
+                    playerTurn = "YELLOW";
+                }
+                if (totalYellowInHouse > 3 && totalRedInHouse < 4 && totalBlueInHouse < 4 && totalGreenInHouse < 4 && playerTurn == "YELLOW")
+                {
+                    if (!individualWinningScreen[3].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+
+                    individualWinningScreen[3].SetActive(true);
+                    playerTurn = "RED";
+                }
+                //2 of 4 players wins the game
+                if (totalRedInHouse > 3 && totalBlueInHouse > 3 && totalGreenInHouse < 4 && totalYellowInHouse < 4 && (playerTurn == "RED" || playerTurn == "BLUE"))
+                {
+                    if (!individualWinningScreen[0].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[1].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[0].SetActive(true);
+                    individualWinningScreen[1].SetActive(true);
+                    playerTurn = "GREEN";
+                }
+                if (totalBlueInHouse > 3 && totalGreenInHouse > 3 && totalRedInHouse < 4 && totalYellowInHouse < 4 && (playerTurn == "BLUE" || playerTurn == "GREEN"))
+                {
+                    if (!individualWinningScreen[1].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[2].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[1].SetActive(true);
+                    individualWinningScreen[2].SetActive(true);
+                    playerTurn = "YELLOW";
+                }
+
+                if (totalGreenInHouse > 3 && totalYellowInHouse > 3 && totalBlueInHouse < 4 && totalRedInHouse < 4 && (playerTurn == "GREEN" || playerTurn == "YELLOW"))
+                {
+                    if (!individualWinningScreen[2].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[3].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[2].SetActive(true);
+                    individualWinningScreen[3].SetActive(true);
+                    playerTurn = "RED";
+                }
+
+                if (totalYellowInHouse > 3 && totalRedInHouse > 3 && totalBlueInHouse < 4 && totalGreenInHouse < 4 && (playerTurn == "YELLOW" || playerTurn == "RED"))
+                {
+                    if (!individualWinningScreen[0].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[3].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[0].SetActive(true);
+                    individualWinningScreen[3].SetActive(true);
+                    playerTurn = "BLUE";
+                }
+
+                //	Diagonally----Red Vs Green ... Yellow Vs Blue winning
+                if (totalYellowInHouse > 3 && totalBlueInHouse > 3 && totalRedInHouse < 4 && totalGreenInHouse < 4 && (playerTurn == "YELLOW" || playerTurn == "BLUE"))
+                {
+                    if (!individualWinningScreen[3].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[1].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[3].SetActive(true);
+                    individualWinningScreen[1].SetActive(true);
+                    if (playerTurn == "BLUE")
+                    {
+                        playerTurn = "GREEN";
+                    }
+                    else
+                    {
+                        if (playerTurn == "YELLOW")
+                        {
+                            playerTurn = "RED";
+                        }
+                    }
+                }
+                if (totalRedInHouse > 3 && totalGreenInHouse > 3 && totalYellowInHouse < 4 && totalBlueInHouse < 4 && (playerTurn == "RED" || playerTurn == "GREEN"))
+                {
+                    if (!individualWinningScreen[0].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[2].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[0].SetActive(true);
+                    individualWinningScreen[2].SetActive(true);
+                    if (playerTurn == "RED")
+                    {
+                        playerTurn = "BLUE";
+                    }
+                    else
+                    {
+                        if (playerTurn == "GREEN")
+                        {
+                            playerTurn = "YELLOW";
+                        }
+                    }
+                }
+                if (totalRedInHouse > 3 && totalGreenInHouse > 3 && totalBlueInHouse > 3 && totalYellowInHouse < 4)
+                {
+                    if (!individualWinningScreen[0].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[2].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[1].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[0].SetActive(true);
+                    individualWinningScreen[2].SetActive(true);
+                    individualWinningScreen[1].SetActive(true);
+                    StartCoroutine("GameOver");
+                    playerTurn = "NONE";
+                }
+
+                if (totalRedInHouse > 3 && totalGreenInHouse > 3 && totalYellowInHouse > 3 && totalBlueInHouse < 4)
+                {
+                    if (!individualWinningScreen[0].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[2].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[3].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[0].SetActive(true);
+                    individualWinningScreen[2].SetActive(true);
+                    individualWinningScreen[3].SetActive(true);
+                    StartCoroutine("GameOver");
+                    playerTurn = "NONE";
+                }
+
+                if (totalBlueInHouse > 3 && totalGreenInHouse > 3 && totalYellowInHouse > 3 && totalRedInHouse < 4)
+                {
+                    if (!individualWinningScreen[1].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[2].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[3].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[1].SetActive(true);
+                    individualWinningScreen[2].SetActive(true);
+                    individualWinningScreen[3].SetActive(true);
+                    StartCoroutine("GameOver");
+                    playerTurn = "NONE";
+                }
+
+                if (totalBlueInHouse > 3 && totalRedInHouse > 3 && totalYellowInHouse > 3 && totalGreenInHouse < 4)
+                {
+                    if (!individualWinningScreen[1].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[0].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    if (!individualWinningScreen[3].activeInHierarchy)
+                    {
+                        SoundManager.winAudioSource.Play();
+                    }
+                    individualWinningScreen[1].SetActive(true);
+                    individualWinningScreen[0].SetActive(true);
+                    individualWinningScreen[3].SetActive(true);
+                    StartCoroutine("GameOver");
+                    playerTurn = "NONE";
+                }
+                break;
+        }
+
+
+        if (currentPlayerName.Contains("RED TOKEN")) 
+        {
+            if(currentPlayerName=="RED TOKEN 1")
+            {
+                currentPlayer = RedToken1.redToken1Collider;
+            }
+            if (currentPlayerName == "RED TOKEN 2")
+            {
+                currentPlayer = RedToken2.redToken2Collider;
+            }
+            if (currentPlayerName == "RED TOKEN 3")
+            {
+                currentPlayer = RedToken3.redToken3Collider;
+            }
+            if (currentPlayerName == "RED TOKEN 4")
+            {
+                currentPlayer = RedToken4.redToken4Collider;
+            }
+        }
+        if (currentPlayerName.Contains("BLUE TOKEN")) 
+        {
+            if (currentPlayerName == "BLUE TOKEN 1")
+            {
+                currentPlayer = BlueToken1.blueToken1Collider;
+            }
+            if (currentPlayerName == "BLUE TOKEN 2")
+            {
+                currentPlayer = BlueToken2.blueToken2Collider;
+            }
+            if (currentPlayerName == "BLUE TOKEN 3")
+            {
+                currentPlayer = BlueToken3.blueToken3Collider;
+            }
+            if (currentPlayerName == "BLUE TOKEN 4")
+            {
+                currentPlayer = BlueToken4.blueToken4Collider;
+            }
+        }
+        if (currentPlayerName.Contains("GREEN TOKEN")) 
+        {
+            if (currentPlayerName == "GREEN TOKEN 1")
+            {
+                currentPlayer = GreenToken1.greenToken1Collider;
+            }
+            if (currentPlayerName == "GREEN TOKEN 2")
+            {
+                currentPlayer = GreenToken2.greenToken2Collider;
+            }
+            if (currentPlayerName == "GREEN TOKEN 3")
+            {
+                currentPlayer = GreenToken3.greenToken3Collider;
+            }
+            if (currentPlayerName == "GREEN TOKEN 4")
+            {
+                currentPlayer = GreenToken4.greenToken4Collider;
+            }
+        }
+        if (currentPlayerName.Contains("YELLOW TOKEN")) 
+        {
+            if (currentPlayerName == "YELLOW TOKEN 1")
+            {
+                currentPlayer = YellowToken1.yellowToken1Collider;
+            }
+            if (currentPlayerName == "YELLOW TOKEN 2")
+            {
+                currentPlayer = YellowToken2.yellowToken2Collider;
+            }
+            if (currentPlayerName == "YELLOW TOKEN 3")
+            {
+                currentPlayer = YellowToken3.yellowToken3Collider;
+            }
+            if (currentPlayerName == "YELLOW TOKEN 4")
+            {
+                currentPlayer = YellowToken4.yellowToken4Collider;
+            }
+        }
+
+        //Eliminating enemy
+        if (currentPlayerName != "none")
+        {
+            switch (MainMenuManager.numberOfPlayers)
+            {
+                case 2: 
+                    if(currentPlayerName.Contains("RED TOKEN"))
+                    {
+                        if (currentPlayer == GreenToken1.greenToken1Collider && currentPlayer!= "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[0].transform.position = greenTokensPos[0];
+                            GreenToken1.greenToken1Collider = "none";
+                            greenSteps[0] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == GreenToken2.greenToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[1].transform.position = greenTokensPos[1];
+                            GreenToken2.greenToken2Collider = "none";
+                            greenSteps[1] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == GreenToken3.greenToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[2].transform.position = greenTokensPos[2];
+                            GreenToken3.greenToken3Collider = "none";
+                            greenSteps[2] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == GreenToken4.greenToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[3].transform.position = greenTokensPos[3];
+                            GreenToken4.greenToken4Collider = "none";
+                            greenSteps[3] = 0;
+                            playerTurn = "RED";
+                        }
+                    }
+                    if(currentPlayerName.Contains("GREEN TOKEN"))
+                    {
+                        if (currentPlayer == RedToken1.redToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[0].transform.position = redTokensPos[0];
+                            RedToken1.redToken1Collider = "none";
+                            redSteps[0] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == RedToken2.redToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[1].transform.position = redTokensPos[1];
+                            RedToken2.redToken2Collider = "none";
+                            redSteps[1] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == RedToken3.redToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[2].transform.position = redTokensPos[2];
+                            RedToken3.redToken3Collider = "none";
+                            redSteps[2] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == RedToken4.redToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[3].transform.position = redTokensPos[3];
+                            RedToken4.redToken4Collider = "none";
+                            redSteps[3] = 0;
+                            playerTurn = "GREEN";
+                        }
+                    }
+                    break;
+                case 4: 
+                    if(currentPlayerName.Contains("RED TOKEN"))
+                    {
+                        if (currentPlayer == BlueToken1.blueToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[0].transform.position = blueTokensPos[0];
+                            BlueToken1.blueToken1Collider = "none";
+                            blueSteps[0] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == BlueToken2.blueToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[1].transform.position = blueTokensPos[1];
+                            BlueToken2.blueToken2Collider = "none";
+                            blueSteps[1] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == BlueToken3.blueToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[2].transform.position = blueTokensPos[2];
+                            BlueToken3.blueToken3Collider = "none";
+                            blueSteps[2] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == BlueToken4.blueToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[3].transform.position = blueTokensPos[3];
+                            BlueToken4.blueToken4Collider = "none";
+                            blueSteps[3] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == GreenToken1.greenToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[0].transform.position = greenTokensPos[0];
+                            GreenToken1.greenToken1Collider = "none";
+                            greenSteps[0] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == GreenToken2.greenToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[1].transform.position = greenTokensPos[1];
+                            GreenToken2.greenToken2Collider = "none";
+                            greenSteps[1] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == GreenToken3.greenToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[2].transform.position = greenTokensPos[2];
+                            GreenToken3.greenToken3Collider = "none";
+                            greenSteps[2] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == GreenToken4.greenToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[3].transform.position = greenTokensPos[3];
+                            GreenToken4.greenToken4Collider = "none";
+                            greenSteps[3] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == YellowToken1.yellowToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[0].transform.position = greenTokensPos[0];
+                            YellowToken1.yellowToken1Collider = "none";
+                            greenSteps[0] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == YellowToken2.yellowToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[1].transform.position = greenTokensPos[1];
+                            YellowToken2.yellowToken2Collider = "none";
+                            greenSteps[1] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == YellowToken3.yellowToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[2].transform.position = greenTokensPos[2];
+                            YellowToken3.yellowToken3Collider = "none";
+                            greenSteps[2] = 0;
+                            playerTurn = "RED";
+                        }
+                        if (currentPlayer == YellowToken4.yellowToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[3].transform.position = greenTokensPos[3];
+                            YellowToken4.yellowToken4Collider = "none";
+                            greenSteps[3] = 0;
+                            playerTurn = "RED";
+                        }
+                    }
+                    if (currentPlayerName.Contains("BLUE TOKEN"))
+                    {
+                        if (currentPlayer == GreenToken1.greenToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[0].transform.position = greenTokensPos[0];
+                            GreenToken1.greenToken1Collider = "none";
+                            greenSteps[0] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == GreenToken2.greenToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[1].transform.position = greenTokensPos[1];
+                            GreenToken2.greenToken2Collider = "none";
+                            greenSteps[1] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == GreenToken3.greenToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[2].transform.position = greenTokensPos[2];
+                            GreenToken3.greenToken3Collider = "none";
+                            greenSteps[2] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == GreenToken4.greenToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[3].transform.position = greenTokensPos[3];
+                            GreenToken4.greenToken4Collider = "none";
+                            greenSteps[3] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == YellowToken1.yellowToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[0].transform.position = greenTokensPos[0];
+                            YellowToken1.yellowToken1Collider = "none";
+                            greenSteps[0] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == YellowToken2.yellowToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[1].transform.position = greenTokensPos[1];
+                            YellowToken2.yellowToken2Collider = "none";
+                            greenSteps[1] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == YellowToken3.yellowToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[2].transform.position = greenTokensPos[2];
+                            YellowToken3.yellowToken3Collider = "none";
+                            greenSteps[2] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == YellowToken4.yellowToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[3].transform.position = greenTokensPos[3];
+                            YellowToken4.yellowToken4Collider = "none";
+                            greenSteps[3] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == RedToken1.redToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[0].transform.position = redTokensPos[0];
+                            RedToken1.redToken1Collider = "none";
+                            redSteps[0] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == RedToken2.redToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[1].transform.position = redTokensPos[1];
+                            RedToken2.redToken2Collider = "none";
+                            redSteps[1] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == RedToken3.redToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[2].transform.position = redTokensPos[2];
+                            RedToken3.redToken3Collider = "none";
+                            redSteps[2] = 0;
+                            playerTurn = "BLUE";
+                        }
+                        if (currentPlayer == RedToken4.redToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[3].transform.position = redTokensPos[3];
+                            RedToken4.redToken4Collider = "none";
+                            redSteps[3] = 0;
+                            playerTurn = "BLUE";
+                        }
+                    }
+                    if (currentPlayerName.Contains("GREEN TOKEN"))
+                    {
+                        if (currentPlayer == YellowToken1.yellowToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[0].transform.position = greenTokensPos[0];
+                            YellowToken1.yellowToken1Collider = "none";
+                            greenSteps[0] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == YellowToken2.yellowToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[1].transform.position = greenTokensPos[1];
+                            YellowToken2.yellowToken2Collider = "none";
+                            greenSteps[1] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == YellowToken3.yellowToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[2].transform.position = greenTokensPos[2];
+                            YellowToken3.yellowToken3Collider = "none";
+                            greenSteps[2] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == YellowToken4.yellowToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[3].transform.position = greenTokensPos[3];
+                            YellowToken4.yellowToken4Collider = "none";
+                            greenSteps[3] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == RedToken1.redToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[0].transform.position = redTokensPos[0];
+                            RedToken1.redToken1Collider = "none";
+                            redSteps[0] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == RedToken2.redToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[1].transform.position = redTokensPos[1];
+                            RedToken2.redToken2Collider = "none";
+                            redSteps[1] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == RedToken3.redToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[2].transform.position = redTokensPos[2];
+                            RedToken3.redToken3Collider = "none";
+                            redSteps[2] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == RedToken4.redToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[3].transform.position = redTokensPos[3];
+                            RedToken4.redToken4Collider = "none";
+                            redSteps[3] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == BlueToken1.blueToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[0].transform.position = blueTokensPos[0];
+                            BlueToken1.blueToken1Collider = "none";
+                            blueSteps[0] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == BlueToken2.blueToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[1].transform.position = blueTokensPos[1];
+                            BlueToken2.blueToken2Collider = "none";
+                            blueSteps[1] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == BlueToken3.blueToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[2].transform.position = blueTokensPos[2];
+                            BlueToken3.blueToken3Collider = "none";
+                            blueSteps[2] = 0;
+                            playerTurn = "GREEN";
+                        }
+                        if (currentPlayer == BlueToken4.blueToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[3].transform.position = blueTokensPos[3];
+                            BlueToken4.blueToken4Collider = "none";
+                            blueSteps[3] = 0;
+                            playerTurn = "GREEN";
+                        }
+                    }
+                    if (currentPlayerName.Contains("YELLOW TOKEN"))
+                    {
+                        if (currentPlayer == RedToken1.redToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[0].transform.position = redTokensPos[0];
+                            RedToken1.redToken1Collider = "none";
+                            redSteps[0] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == RedToken2.redToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[1].transform.position = redTokensPos[1];
+                            RedToken2.redToken2Collider = "none";
+                            redSteps[1] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == RedToken3.redToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[2].transform.position = redTokensPos[2];
+                            RedToken3.redToken3Collider = "none";
+                            redSteps[2] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == RedToken4.redToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            redTokens[3].transform.position = redTokensPos[3];
+                            RedToken4.redToken4Collider = "none";
+                            redSteps[3] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == BlueToken1.blueToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[0].transform.position = blueTokensPos[0];
+                            BlueToken1.blueToken1Collider = "none";
+                            blueSteps[0] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == BlueToken2.blueToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[1].transform.position = blueTokensPos[1];
+                            BlueToken2.blueToken2Collider = "none";
+                            blueSteps[1] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == BlueToken3.blueToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[2].transform.position = blueTokensPos[2];
+                            BlueToken3.blueToken3Collider = "none";
+                            blueSteps[2] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == BlueToken4.blueToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            blueTokens[3].transform.position = blueTokensPos[3];
+                            BlueToken4.blueToken4Collider = "none";
+                            blueSteps[3] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == GreenToken1.greenToken1Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[0].transform.position = greenTokensPos[0];
+                            GreenToken1.greenToken1Collider = "none";
+                            greenSteps[0] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == GreenToken2.greenToken2Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[1].transform.position = greenTokensPos[1];
+                            GreenToken2.greenToken2Collider = "none";
+                            greenSteps[1] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == GreenToken3.greenToken3Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[2].transform.position = greenTokensPos[2];
+                            GreenToken3.greenToken3Collider = "none";
+                            greenSteps[2] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                        if (currentPlayer == GreenToken4.greenToken4Collider && currentPlayer != "Safe_Spot")
+                        {
+                            SoundManager.dismissalAudioSource.Play();
+                            greenTokens[3].transform.position = greenTokensPos[3];
+                            GreenToken4.greenToken4Collider = "none";
+                            greenSteps[3] = 0;
+                            playerTurn = "YELLOW";
+                        }
+                    }
+                    break;
+            }
+        }
+        switch (MainMenuManager.numberOfPlayers)
+        {
+
             case 2:
                 if (playerTurn == "RED")
                 {
@@ -140,10 +944,10 @@ public class GameManager : MonoBehaviour
                 {
                     diceButtonPos.position = eachDicePos[0].position;
                     frames[0].SetActive(true);
-                    for(int i = 1; i <= 3; i++)
+                    for (int i = 1; i <= 3; i++)
                     {
                         frames[i].SetActive(false);
-                    }    
+                    }
                 }
                 if (playerTurn == "BLUE")
                 {
@@ -177,8 +981,8 @@ public class GameManager : MonoBehaviour
                     frames[3].SetActive(true);
                     for (int i = 0; i <= 2; i++)
                     {
-                        
-                            frames[i].SetActive(false);
+
+                        frames[i].SetActive(false);
                     }
                 }
                 for (int i = 0; i <= 3; i++)
@@ -194,162 +998,6 @@ public class GameManager : MonoBehaviour
                 }
                 break;
         }
-        if (currentPlayerName.Contains("RED TOKEN")) ;
-        {
-            if(currentPlayerName=="RED TOKEN 1")
-            {
-                currentPlayer = RedToken1.redToken1Collider;
-            }
-            if (currentPlayerName == "RED TOKEN 2")
-            {
-                currentPlayer = RedToken2.redToken2Collider;
-            }
-            if (currentPlayerName == "RED TOKEN 3")
-            {
-                currentPlayer = RedToken3.redToken3Collider;
-            }
-            if (currentPlayerName == "RED TOKEN 4")
-            {
-                currentPlayer = RedToken4.redToken4Collider;
-            }
-        }
-        if (currentPlayerName.Contains("BLUE TOKEN")) ;
-        {
-            if (currentPlayerName == "BLUE  TOKEN 1")
-            {
-                currentPlayer = BlueToken1.blueToken1Collider;
-            }
-            if (currentPlayerName == "BLUE  TOKEN 2")
-            {
-                currentPlayer = BlueToken2.blueToken2Collider;
-            }
-            if (currentPlayerName == "BLUE  TOKEN 3")
-            {
-                currentPlayer = BlueToken3.blueToken3Collider;
-            }
-            if (currentPlayerName == "BLUE  TOKEN 4")
-            {
-                currentPlayer = BlueToken4.blueToken4Collider;
-            }
-        }
-        if (currentPlayerName.Contains("GREEN TOKEN")) ;
-        {
-            if (currentPlayerName == "GREEN TOKEN 1")
-            {
-                currentPlayer = GreenToken1.greenToken1Collider;
-            }
-            if (currentPlayerName == "GREEN TOKEN 2")
-            {
-                currentPlayer = GreenToken2.greenToken2Collider;
-            }
-            if (currentPlayerName == "GREEN TOKEN 3")
-            {
-                currentPlayer = GreenToken3.greenToken3Collider;
-            }
-            if (currentPlayerName == "GREEN TOKEN 4")
-            {
-                currentPlayer = GreenToken4.greenToken4Collider;
-            }
-        }
-        if (currentPlayerName.Contains("YELLOW TOKEN")) ;
-        {
-            if (currentPlayerName == "YELLOW TOKEN 1")
-            {
-                currentPlayer = YellowToken1.yellowToken1Collider;
-            }
-            if (currentPlayerName == "YELLOW TOKEN 2")
-            {
-                currentPlayer = YellowToken2.yellowToken2Collider;
-            }
-            if (currentPlayerName == "YELLOW TOKEN 3")
-            {
-                currentPlayer = YellowToken3.yellowToken3Collider;
-            }
-            if (currentPlayerName == "YELLOW TOKEN 4")
-            {
-                currentPlayer = YellowToken4.yellowToken4Collider;
-            }
-        }
-
-        //Eliminating enemy
-        /*if (currentPlayerName != "none")
-        {
-            switch (MainMenuManager.numberOfPlayers)
-            {
-                case 2: 
-                    if(currentPlayerName.Contains("RED TOKEN"))
-                    {
-                        if (currentPlayer == GreenToken1.greenToken1Collider && currentPlayer!="Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            greenTokens[0].transform.position = greenTokensPos[0];
-                            GreenToken1.greenToken1Collider = "none";
-                            greenSteps[0] = 0;
-                            playerTurn = "RED";
-                        }
-                        if (currentPlayer == GreenToken2.greenToken2Collider && currentPlayer != "Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            greenTokens[1].transform.position = greenTokensPos[1];
-                            GreenToken2.greenToken2Collider = "none";
-                            greenSteps[1] = 0;
-                            playerTurn = "RED";
-                        }
-                        if (currentPlayer == GreenToken3.greenToken3Collider && currentPlayer != "Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            greenTokens[2].transform.position = greenTokensPos[2];
-                            GreenToken3.greenToken3Collider = "none";
-                            greenSteps[2] = 0;
-                            playerTurn = "RED";
-                        }
-                        if (currentPlayer == GreenToken4.greenToken4Collider && currentPlayer != "Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            greenTokens[3].transform.position = greenTokensPos[3];
-                            GreenToken4.greenToken4Collider = "none";
-                            greenSteps[3] = 0;
-                            playerTurn = "RED";
-                        }
-                    }
-                    if(currentPlayerName.Contains("GREEN TOKEN"))
-                    {
-                        if (currentPlayer == RedToken1.redToken1Collider && currentPlayer != "Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            redTokens[0].transform.position = redTokensPos[0];
-                            RedToken1.redToken1Collider = "none";
-                            redSteps[0] = 0;
-                            playerTurn = "GREEN";
-                        }
-                        if (currentPlayer == RedToken2.redToken2Collider && currentPlayer != "Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            redTokens[1].transform.position = redTokensPos[1];
-                            RedToken2.redToken2Collider = "none";
-                            redSteps[1] = 0;
-                            playerTurn = "GREEN";
-                        }
-                        if (currentPlayer == RedToken3.redToken3Collider && currentPlayer != "Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            redTokens[2].transform.position = redTokensPos[2];
-                            RedToken3.redToken3Collider = "none";
-                            redSteps[2] = 0;
-                            playerTurn = "GREEN";
-                        }
-                        if (currentPlayer == RedToken4.redToken4Collider && currentPlayer != "Star")
-                        {
-                            SoundManager.dismissalAudioSource.Play();
-                            redTokens[3].transform.position = redTokensPos[3];
-                            RedToken4.redToken4Collider = "none";
-                            redSteps[3] = 0;
-                            playerTurn = "GREEN";
-                        }
-                    }
-                    break;
-            }
-        }*/
 
     }
 
@@ -1404,7 +2052,7 @@ public class GameManager : MonoBehaviour
                 {
                     greenToken4Path[i] = greenMovementBlock[greenSteps[3] + i].transform.position;
                 }
-                greenSteps[2] += DiceNumAnimation;
+                greenSteps[3] += DiceNumAnimation;
                 if (greenToken4Path.Length > 1)
                 {
                     iTween.MoveTo(greenTokens[3], iTween.Hash("path", greenToken4Path, "speed", 125, "time", 2.0f, "easetype", "elastic", "oncomplete", "IntializeDice", "oncompletetarget", this.gameObject));
@@ -1687,7 +2335,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                if (DiceNumAnimation == 6 && blueSteps[1] == 0)
+                if (DiceNumAnimation == 6 && blueSteps[2] == 0)
                 {
                     Vector3[] blueToken3Path = new Vector3[1];
                     blueToken3Path[0] = blueMovementBlock[blueSteps[2]].transform.position;
@@ -1707,7 +2355,7 @@ public class GameManager : MonoBehaviour
                 {
                     blueToken3Path[i] = blueMovementBlock[blueSteps[2] + i].transform.position;
                 }
-                blueSteps[1] += DiceNumAnimation;
+                blueSteps[2] += DiceNumAnimation;
                 if (blueToken3Path.Length > 1)
                 {
                     iTween.MoveTo(blueTokens[2], iTween.Hash("path", blueToken3Path, "speed", 125, "time", 2.0f, "easetype", "elastic", "oncomplete", "IntializeDice", "oncompletetarget", this.gameObject));
@@ -1788,7 +2436,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                if (DiceNumAnimation == 6 && blueSteps[1] == 0)
+                if (DiceNumAnimation == 6 && blueSteps[3] == 0)
                 {
                     Vector3[] blueToken4Path = new Vector3[1];
                     blueToken4Path[0] = blueMovementBlock[blueSteps[3]].transform.position;
@@ -1808,7 +2456,7 @@ public class GameManager : MonoBehaviour
                 {
                     blueToken4Path[i] = blueMovementBlock[blueSteps[3] + i].transform.position;
                 }
-                blueSteps[1] += DiceNumAnimation;
+                blueSteps[3] += DiceNumAnimation;
                 if (blueToken4Path.Length > 1)
                 {
                     iTween.MoveTo(blueTokens[3], iTween.Hash("path", blueToken4Path, "speed", 125, "time", 2.0f, "easetype", "elastic", "oncomplete", "IntializeDice", "oncompletetarget", this.gameObject));
